@@ -7,9 +7,10 @@ import java.awt.Point;
 public class Utils {
 
     // reimplement the draw of lines using points
+    private static List<Pair<Point, Point>> lines = new ArrayList<>();
 
     public static List<Pair<Point, Point>> drawLines(List<Point> points) {
-        List<Pair<Point, Point>> lines = new ArrayList<>();
+        lines.clear();
         for (int i = 0; i < points.size(); i++) {
             if (i + 1 < points.size()) {
                 Point p1 = points.get(i);
@@ -35,9 +36,11 @@ public class Utils {
             Point p2 = tuple.getSecond();
             Point pointQ = new Point((int) (0.75 * p1.getX() + 0.25 * p2.getX()),
                     (int) (0.75 * p1.getY() + 0.25 * p2.getY()));
+            points.add(pointQ);
+
             Point pointR = new Point((int) (0.25 * p1.getX() + 0.75 * p2.getX()),
                     (int) (0.25 * p1.getY() + 0.75 * p2.getY()));
-            points.add(pointQ);
+
             points.add(pointR);
         }
         Pair<Point, Point> lastLine = lines.get(lines.size() - 1);
