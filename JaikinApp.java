@@ -5,7 +5,7 @@ import javax.swing.*;
 public class JaikinApp {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Chaikin Curve (Java/Swing)");
+            JFrame frame = new JFrame("Jaikin Curve Swing  App ");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             DrawingPanel panel = new DrawingPanel();
