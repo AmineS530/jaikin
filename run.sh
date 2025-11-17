@@ -1,0 +1,1 @@
+javac -d build *.java && java -cp build Jaikin
