@@ -156,7 +156,10 @@ public class Loop extends JPanel {
                     ys[i] = Math.round(iter.get(i).y);
                 }
                 g.setColor(Color.PINK);
+                // Drawing lines
+                ((Graphics2D) g).setStroke(new BasicStroke(3));
                 g.drawPolyline(xs, ys, n);
+                // draw current step
                 g.setColor(Color.WHITE);
                 g.setFont(g.getFont().deriveFont(14f));
                 g.drawString("| Step: " + currentIteration + " / " + MAX_ITERATIONS + " |", 10, 20);
